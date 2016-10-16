@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <Button android:text="Reset" android:onClick="onClickReset" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:text="Clear strong" android:onClick="onClickClearStrong" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:text="Clear soft" android:onClick="onClickClearSoft" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:text="Clear weak" android:onClick="onClickClearWeak" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:text="Poll" android:onClick="onClickPoll" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:text="Garbage collection" android:onClick="onClickGarbageCollection" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

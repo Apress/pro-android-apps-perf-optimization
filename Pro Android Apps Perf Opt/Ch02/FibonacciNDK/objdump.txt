@@ -1,0 +1,66 @@
+
+../obj/local/armeabi-v7a/libfibonarmcci.so:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000003a4 <Java_com_apress_proandroid_FibonacciNative_iterativeFaster>:
+ 3a4:	e1a00002 	mov	r0, r2
+ 3a8:	ea000018 	b	410 <iterativeFaster>
+
+000003ac <Java_com_apress_proandroid_FibonacciNative_recursive>:
+ 3ac:	e1a00002 	mov	r0, r2
+ 3b0:	ea000001 	b	3bc <recursive>
+
+000003b4 <Java_com_apress_proandroid_Fibonacci_recursiveNative>:
+ 3b4:	e1a00002 	mov	r0, r2
+ 3b8:	eaffffff 	b	3bc <recursive>
+
+000003bc <recursive>:
+ 3bc:	e3500001 	cmp	r0, #1	; 0x1
+ 3c0:	e92d40d0 	push	{r4, r6, r7, lr}
+ 3c4:	93a06000 	movls	r6, #0	; 0x0
+ 3c8:	93a07000 	movls	r7, #0	; 0x0
+ 3cc:	9a00000a 	bls	3fc <recursive+0x40>
+ 3d0:	e2404002 	sub	r4, r0, #2	; 0x2
+ 3d4:	e3a06000 	mov	r6, #0	; 0x0
+ 3d8:	e3a07000 	mov	r7, #0	; 0x0
+ 3dc:	e1a00004 	mov	r0, r4
+ 3e0:	e2444001 	sub	r4, r4, #1	; 0x1
+ 3e4:	ebfffff4 	bl	3bc <recursive>
+ 3e8:	e0966000 	adds	r6, r6, r0
+ 3ec:	e0a77001 	adc	r7, r7, r1
+ 3f0:	e3740001 	cmn	r4, #1	; 0x1
+ 3f4:	1afffff8 	bne	3dc <recursive+0x20>
+ 3f8:	e3a00001 	mov	r0, #1	; 0x1
+ 3fc:	e0962000 	adds	r2, r6, r0
+ 400:	e2a73000 	adc	r3, r7, #0	; 0x0
+ 404:	e1a00002 	mov	r0, r2
+ 408:	e1a01003 	mov	r1, r3
+ 40c:	e8bd80d0 	pop	{r4, r6, r7, pc}
+
+00000410 <iterativeFaster>:
+ 410:	e3500001 	cmp	r0, #1	; 0x1
+ 414:	e92d0030 	push	{r4, r5}
+ 418:	91a02000 	movls	r2, r0
+ 41c:	93a03000 	movls	r3, #0	; 0x0
+ 420:	9a00000e 	bls	460 <iterativeFaster+0x50>
+ 424:	e2400001 	sub	r0, r0, #1	; 0x1
+ 428:	e1b010a0 	lsrs	r1, r0, #1
+ 42c:	03a02001 	moveq	r2, #1	; 0x1
+ 430:	03a03000 	moveq	r3, #0	; 0x0
+ 434:	0a000009 	beq	460 <iterativeFaster+0x50>
+ 438:	e3a02001 	mov	r2, #1	; 0x1
+ 43c:	e3a03000 	mov	r3, #0	; 0x0
+ 440:	e0024000 	and	r4, r2, r0
+ 444:	e3a05000 	mov	r5, #0	; 0x0
+ 448:	e0944002 	adds	r4, r4, r2
+ 44c:	e0a55003 	adc	r5, r5, r3
+ 450:	e0922004 	adds	r2, r2, r4
+ 454:	e0a33005 	adc	r3, r3, r5
+ 458:	e2511001 	subs	r1, r1, #1	; 0x1
+ 45c:	1afffff9 	bne	448 <iterativeFaster+0x38>
+ 460:	e1a01003 	mov	r1, r3
+ 464:	e1a00002 	mov	r0, r2
+ 468:	e8bd0030 	pop	{r4, r5}
+ 46c:	e12fff1e 	bx	lr

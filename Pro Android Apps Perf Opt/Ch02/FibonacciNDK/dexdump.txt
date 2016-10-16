@@ -1,0 +1,797 @@
+Processing 'bin/classes.dex'...
+Opened 'bin/classes.dex', DEX version '035'
+Class #0            -
+  Class descriptor  : 'Lcom/apress/proandroid/APressJNIActivity;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Landroid/app/Activity;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/APressJNIActivity;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000630:                                        |[000630] com.apress.proandroid.APressJNIActivity.<init>:()V
+000640: 7010 0000 0000                         |0000: invoke-direct {v0}, Landroid/app/Activity;.<init>:()V // method@0000
+000646: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=8
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/APressJNIActivity; 
+
+  Virtual methods   -
+    #0              : (in Lcom/apress/proandroid/APressJNIActivity;)
+      name          : 'onClick'
+      type          : '(Landroid/view/View;)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 9
+      ins           : 2
+      outs          : 3
+      insns size    : 49 16-bit code units
+000648:                                        |[000648] com.apress.proandroid.APressJNIActivity.onClick:(Landroid/view/View;)V
+000658: 7100 2700 0000                         |0000: invoke-static {}, Ljava/lang/System;.currentTimeMillis:()J // method@0027
+00065e: 0b02                                   |0003: move-result-wide v2
+000660: 1304 1e00                              |0004: const/16 v4, #int 30 // #1e
+000664: 7110 0e00 0400                         |0006: invoke-static {v4}, Lcom/apress/proandroid/Fibonacci;.recursive:(I)J // method@000e
+00066a: 0b00                                   |0009: move-result-wide v0
+00066c: 7100 2700 0000                         |000a: invoke-static {}, Ljava/lang/System;.currentTimeMillis:()J // method@0027
+000672: 0b04                                   |000d: move-result-wide v4
+000674: 9c02 0402                              |000e: sub-long v2, v4, v2
+000678: 1a04 0400                              |0010: const-string v4, "Fibonacci" // string@0004
+00067c: 2205 1700                              |0012: new-instance v5, Ljava/lang/StringBuilder; // type@0017
+000680: 7120 2100 1000                         |0014: invoke-static {v0, v1}, Ljava/lang/String;.valueOf:(J)Ljava/lang/String; // method@0021
+000686: 0c06                                   |0017: move-result-object v6
+000688: 7110 2200 0600                         |0018: invoke-static {v6}, Ljava/lang/String;.valueOf:(Ljava/lang/Object;)Ljava/lang/String; // method@0022
+00068e: 0c06                                   |001b: move-result-object v6
+000690: 7020 2300 6500                         |001c: invoke-direct {v5, v6}, Ljava/lang/StringBuilder;.<init>:(Ljava/lang/String;)V // method@0023
+000696: 1a06 0000                              |001f: const-string v6, " - time: " // string@0000
+00069a: 6e20 2500 6500                         |0021: invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0025
+0006a0: 0c05                                   |0024: move-result-object v5
+0006a2: 6e30 2400 2503                         |0025: invoke-virtual {v5, v2, v3}, Ljava/lang/StringBuilder;.append:(J)Ljava/lang/StringBuilder; // method@0024
+0006a8: 0c05                                   |0028: move-result-object v5
+0006aa: 6e10 2600 0500                         |0029: invoke-virtual {v5}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0026
+0006b0: 0c05                                   |002c: move-result-object v5
+0006b2: 7120 0200 5400                         |002d: invoke-static {v4, v5}, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I // method@0002
+0006b8: 0e00                                   |0030: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=17
+        0x0004 line=18
+        0x000a line=19
+        0x0010 line=20
+        0x0030 line=21
+      locals        : 
+        0x000a - 0x0031 reg=0 f J 
+        0x0004 - 0x0031 reg=2 time J 
+        0x0000 - 0x0031 reg=7 this Lcom/apress/proandroid/APressJNIActivity; 
+        0x0000 - 0x0031 reg=8 v Landroid/view/View; 
+
+    #1              : (in Lcom/apress/proandroid/APressJNIActivity;)
+      name          : 'onClick2'
+      type          : '(Landroid/view/View;)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 9
+      ins           : 2
+      outs          : 3
+      insns size    : 57 16-bit code units
+0006bc:                                        |[0006bc] com.apress.proandroid.APressJNIActivity.onClick2:(Landroid/view/View;)V
+0006cc: 1304 1e00                              |0000: const/16 v4, #int 30 // #1e
+0006d0: 7100 2700 0000                         |0002: invoke-static {}, Ljava/lang/System;.currentTimeMillis:()J // method@0027
+0006d6: 0b02                                   |0005: move-result-wide v2
+0006d8: 7110 0b00 0400                         |0006: invoke-static {v4}, Lcom/apress/proandroid/Fibonacci2;.recursive:(I)J // method@000b
+0006de: 0b00                                   |0009: move-result-wide v0
+0006e0: 7110 0a00 0400                         |000a: invoke-static {v4}, Lcom/apress/proandroid/Fibonacci2;.iterativeFaster:(I)J // method@000a
+0006e6: 0b04                                   |000d: move-result-wide v4
+0006e8: bb40                                   |000e: add-long/2addr v0, v4
+0006ea: 7100 2700 0000                         |000f: invoke-static {}, Ljava/lang/System;.currentTimeMillis:()J // method@0027
+0006f0: 0b04                                   |0012: move-result-wide v4
+0006f2: 9c02 0402                              |0013: sub-long v2, v4, v2
+0006f6: 1604 0200                              |0015: const-wide/16 v4, #int 2 // #2
+0006fa: be40                                   |0017: div-long/2addr v0, v4
+0006fc: 1a04 0600                              |0018: const-string v4, "Fibonacci2" // string@0006
+000700: 2205 1700                              |001a: new-instance v5, Ljava/lang/StringBuilder; // type@0017
+000704: 7120 2100 1000                         |001c: invoke-static {v0, v1}, Ljava/lang/String;.valueOf:(J)Ljava/lang/String; // method@0021
+00070a: 0c06                                   |001f: move-result-object v6
+00070c: 7110 2200 0600                         |0020: invoke-static {v6}, Ljava/lang/String;.valueOf:(Ljava/lang/Object;)Ljava/lang/String; // method@0022
+000712: 0c06                                   |0023: move-result-object v6
+000714: 7020 2300 6500                         |0024: invoke-direct {v5, v6}, Ljava/lang/StringBuilder;.<init>:(Ljava/lang/String;)V // method@0023
+00071a: 1a06 0000                              |0027: const-string v6, " - time: " // string@0000
+00071e: 6e20 2500 6500                         |0029: invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;.append:(Ljava/lang/String;)Ljava/lang/StringBuilder; // method@0025
+000724: 0c05                                   |002c: move-result-object v5
+000726: 6e30 2400 2503                         |002d: invoke-virtual {v5, v2, v3}, Ljava/lang/StringBuilder;.append:(J)Ljava/lang/StringBuilder; // method@0024
+00072c: 0c05                                   |0030: move-result-object v5
+00072e: 6e10 2600 0500                         |0031: invoke-virtual {v5}, Ljava/lang/StringBuilder;.toString:()Ljava/lang/String; // method@0026
+000734: 0c05                                   |0034: move-result-object v5
+000736: 7120 0200 5400                         |0035: invoke-static {v4, v5}, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I // method@0002
+00073c: 0e00                                   |0038: return-void
+      catches       : (none)
+      positions     : 
+        0x0002 line=24
+        0x0006 line=25
+        0x000a line=26
+        0x000f line=27
+        0x0015 line=28
+        0x0018 line=29
+        0x0038 line=30
+      locals        : 
+        0x000a - 0x0039 reg=0 f J 
+        0x0006 - 0x0039 reg=2 time J 
+        0x0000 - 0x0039 reg=7 this Lcom/apress/proandroid/APressJNIActivity; 
+        0x0000 - 0x0039 reg=8 v Landroid/view/View; 
+
+    #2              : (in Lcom/apress/proandroid/APressJNIActivity;)
+      name          : 'onCreate'
+      type          : '(Landroid/os/Bundle;)V'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 3
+      ins           : 2
+      outs          : 2
+      insns size    : 9 16-bit code units
+000740:                                        |[000740] com.apress.proandroid.APressJNIActivity.onCreate:(Landroid/os/Bundle;)V
+000750: 6f20 0100 2100                         |0000: invoke-super {v1, v2}, Landroid/app/Activity;.onCreate:(Landroid/os/Bundle;)V // method@0001
+000756: 1500 037f                              |0003: const/high16 v0, #int 2130903040 // #7f03
+00075a: 6e20 0700 0100                         |0005: invoke-virtual {v1, v0}, Lcom/apress/proandroid/APressJNIActivity;.setContentView:(I)V // method@0007
+000760: 0e00                                   |0008: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=12
+        0x0003 line=13
+        0x0008 line=14
+      locals        : 
+        0x0000 - 0x0009 reg=1 this Lcom/apress/proandroid/APressJNIActivity; 
+        0x0000 - 0x0009 reg=2 savedInstanceState Landroid/os/Bundle; 
+
+  source_file_idx   : 3 (APressJNIActivity.java)
+
+Class #1            -
+  Class descriptor  : 'Lcom/apress/proandroid/Fibonacci2;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/apress/proandroid/Fibonacci2;)
+      name          : 'fibStrategy'
+      type          : 'Lcom/apress/proandroid/FibonacciInterface;'
+      access        : 0x001a (PRIVATE STATIC FINAL)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/Fibonacci2;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 3
+      ins           : 0
+      outs          : 1
+      insns size    : 16 16-bit code units
+000764:                                        |[000764] com.apress.proandroid.Fibonacci2.<clinit>:()V
+000774: 2201 0b00                              |0000: new-instance v1, Lcom/apress/proandroid/FibonacciNative; // type@000b
+000778: 7010 1700 0100                         |0002: invoke-direct {v1}, Lcom/apress/proandroid/FibonacciNative;.<init>:()V // method@0017
+00077e: 6901 0000                              |0005: sput-object v1, Lcom/apress/proandroid/Fibonacci2;.fibStrategy:Lcom/apress/proandroid/FibonacciInterface; // field@0000
+000782: 0e00                                   |0007: return-void
+000784: 0d02                                   |0008: move-exception v2
+000786: 0720                                   |0009: move-object v0, v2
+000788: 2201 0a00                              |000a: new-instance v1, Lcom/apress/proandroid/FibonacciJava; // type@000a
+00078c: 7010 1300 0100                         |000c: invoke-direct {v1}, Lcom/apress/proandroid/FibonacciJava;.<init>:()V // method@0013
+000792: 28f6                                   |000f: goto 0005 // -000a
+      catches       : 1
+        0x0000 - 0x0005
+          Ljava/lang/Throwable; -> 0x0008
+      positions     : 
+        0x0000 line=9
+        0x0005 line=13
+        0x0007 line=4
+        0x0008 line=10
+        0x000a line=11
+      locals        : 
+        0x0005 - 0x0008 reg=1 fib Lcom/apress/proandroid/FibonacciInterface; 
+        0x000a - 0x0010 reg=0 e Ljava/lang/Throwable; 
+        0x000f - 0x0010 reg=1 fib Lcom/apress/proandroid/FibonacciInterface; 
+
+    #1              : (in Lcom/apress/proandroid/Fibonacci2;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0007a0:                                        |[0007a0] com.apress.proandroid.Fibonacci2.<init>:()V
+0007b0: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+0007b6: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=4
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/Fibonacci2; 
+
+    #2              : (in Lcom/apress/proandroid/Fibonacci2;)
+      name          : 'iterativeFaster'
+      type          : '(I)J'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 3
+      ins           : 1
+      outs          : 2
+      insns size    : 7 16-bit code units
+0007b8:                                        |[0007b8] com.apress.proandroid.Fibonacci2.iterativeFaster:(I)J
+0007c8: 6200 0000                              |0000: sget-object v0, Lcom/apress/proandroid/Fibonacci2;.fibStrategy:Lcom/apress/proandroid/FibonacciInterface; // field@0000
+0007cc: 7220 1100 2000                         |0002: invoke-interface {v0, v2}, Lcom/apress/proandroid/FibonacciInterface;.iterativeFaster:(I)J // method@0011
+0007d2: 0b00                                   |0005: move-result-wide v0
+0007d4: 1000                                   |0006: return-wide v0
+      catches       : (none)
+      positions     : 
+        0x0000 line=21
+      locals        : 
+        0x0000 - 0x0007 reg=2 n I 
+
+    #3              : (in Lcom/apress/proandroid/Fibonacci2;)
+      name          : 'recursive'
+      type          : '(I)J'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 3
+      ins           : 1
+      outs          : 2
+      insns size    : 7 16-bit code units
+0007d8:                                        |[0007d8] com.apress.proandroid.Fibonacci2.recursive:(I)J
+0007e8: 6200 0000                              |0000: sget-object v0, Lcom/apress/proandroid/Fibonacci2;.fibStrategy:Lcom/apress/proandroid/FibonacciInterface; // field@0000
+0007ec: 7220 1200 2000                         |0002: invoke-interface {v0, v2}, Lcom/apress/proandroid/FibonacciInterface;.recursive:(I)J // method@0012
+0007f2: 0b00                                   |0005: move-result-wide v0
+0007f4: 1000                                   |0006: return-wide v0
+      catches       : (none)
+      positions     : 
+        0x0000 line=17
+      locals        : 
+        0x0000 - 0x0007 reg=2 n I 
+
+  Virtual methods   -
+  source_file_idx   : 7 (Fibonacci2.java)
+
+Class #2            -
+  Class descriptor  : 'Lcom/apress/proandroid/Fibonacci;'
+  Access flags      : 0x0001 (PUBLIC)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/apress/proandroid/Fibonacci;)
+      name          : 'useNative'
+      type          : 'Z'
+      access        : 0x001a (PRIVATE STATIC FINAL)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/Fibonacci;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 6
+      ins           : 0
+      outs          : 2
+      insns size    : 32 16-bit code units
+0007f8:                                        |[0007f8] com.apress.proandroid.Fibonacci.<clinit>:()V
+000808: 7100 2700 0000                         |0000: invoke-static {}, Ljava/lang/System;.currentTimeMillis:()J // method@0027
+00080e: 0b02                                   |0003: move-result-wide v2
+000810: 1a04 3e00                              |0004: const-string v4, "fibonacci" // string@003e
+000814: 7110 2800 0400                         |0006: invoke-static {v4}, Ljava/lang/System;.loadLibrary:(Ljava/lang/String;)V // method@0028
+00081a: 1211                                   |0009: const/4 v1, #int 1 // #1
+00081c: 7100 2700 0000                         |000a: invoke-static {}, Ljava/lang/System;.currentTimeMillis:()J // method@0027
+000822: 0b04                                   |000d: move-result-wide v4
+000824: 9c02 0402                              |000e: sub-long v2, v4, v2
+000828: 1a04 2b00                              |0010: const-string v4, "TOTO" // string@002b
+00082c: 7120 2100 3200                         |0012: invoke-static {v2, v3}, Ljava/lang/String;.valueOf:(J)Ljava/lang/String; // method@0021
+000832: 0c05                                   |0015: move-result-object v5
+000834: 7120 0200 5400                         |0016: invoke-static {v4, v5}, Landroid/util/Log;.i:(Ljava/lang/String;Ljava/lang/String;)I // method@0002
+00083a: 6a01 0100                              |0019: sput-boolean v1, Lcom/apress/proandroid/Fibonacci;.useNative:Z // field@0001
+00083e: 0e00                                   |001b: return-void
+000840: 0d04                                   |001c: move-exception v4
+000842: 0740                                   |001d: move-object v0, v4
+000844: 1201                                   |001e: const/4 v1, #int 0 // #0
+000846: 28fa                                   |001f: goto 0019 // -0006
+      catches       : 1
+        0x0000 - 0x0019
+          Ljava/lang/Throwable; -> 0x001c
+      positions     : 
+        0x0000 line=10
+        0x0004 line=11
+        0x0009 line=12
+        0x000a line=13
+        0x0010 line=14
+        0x0019 line=18
+        0x001b line=5
+        0x001c line=15
+        0x001e line=16
+      locals        : 
+        0x0004 - 0x0019 reg=2 time J 
+        0x000a - 0x001c reg=1 success Z 
+        0x001e - 0x0020 reg=0 e Ljava/lang/Throwable; 
+        0x001f - 0x0020 reg=1 success Z 
+
+    #1              : (in Lcom/apress/proandroid/Fibonacci;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000854:                                        |[000854] com.apress.proandroid.Fibonacci.<init>:()V
+000864: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+00086a: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=5
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/Fibonacci; 
+
+    #2              : (in Lcom/apress/proandroid/Fibonacci;)
+      name          : 'recursive'
+      type          : '(I)J'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 3
+      ins           : 1
+      outs          : 1
+      insns size    : 14 16-bit code units
+00086c:                                        |[00086c] com.apress.proandroid.Fibonacci.recursive:(I)J
+00087c: 6300 0100                              |0000: sget-boolean v0, Lcom/apress/proandroid/Fibonacci;.useNative:Z // field@0001
+000880: 3800 0700                              |0002: if-eqz v0, 0009 // +0007
+000884: 7110 1000 0200                         |0004: invoke-static {v2}, Lcom/apress/proandroid/Fibonacci;.recursiveNative:(I)J // method@0010
+00088a: 0b00                                   |0007: move-result-wide v0
+00088c: 1000                                   |0008: return-wide v0
+00088e: 7110 0f00 0200                         |0009: invoke-static {v2}, Lcom/apress/proandroid/Fibonacci;.recursiveJava:(I)J // method@000f
+000894: 0b00                                   |000c: move-result-wide v0
+000896: 28fb                                   |000d: goto 0008 // -0005
+      catches       : (none)
+      positions     : 
+        0x0000 line=22
+        0x0008 line=23
+      locals        : 
+        0x0000 - 0x000e reg=2 n I 
+
+    #3              : (in Lcom/apress/proandroid/Fibonacci;)
+      name          : 'recursiveJava'
+      type          : '(I)J'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 5
+      ins           : 1
+      outs          : 1
+      insns size    : 20 16-bit code units
+000898:                                        |[000898] com.apress.proandroid.Fibonacci.recursiveJava:(I)J
+0008a8: 1212                                   |0000: const/4 v2, #int 1 // #1
+0008aa: 3724 1100                              |0001: if-le v4, v2, 0012 // +0011
+0008ae: 1220                                   |0003: const/4 v0, #int 2 // #2
+0008b0: 9100 0400                              |0004: sub-int v0, v4, v0
+0008b4: 7110 0f00 0000                         |0006: invoke-static {v0}, Lcom/apress/proandroid/Fibonacci;.recursiveJava:(I)J // method@000f
+0008ba: 0b00                                   |0009: move-result-wide v0
+0008bc: 9102 0402                              |000a: sub-int v2, v4, v2
+0008c0: 7110 0f00 0200                         |000c: invoke-static {v2}, Lcom/apress/proandroid/Fibonacci;.recursiveJava:(I)J // method@000f
+0008c6: 0b02                                   |000f: move-result-wide v2
+0008c8: bb20                                   |0010: add-long/2addr v0, v2
+0008ca: 1000                                   |0011: return-wide v0
+0008cc: 8140                                   |0012: int-to-long v0, v4
+0008ce: 28fe                                   |0013: goto 0011 // -0002
+      catches       : (none)
+      positions     : 
+        0x0001 line=27
+        0x0011 line=28
+      locals        : 
+        0x0000 - 0x0014 reg=4 n I 
+
+    #4              : (in Lcom/apress/proandroid/Fibonacci;)
+      name          : 'recursiveNative'
+      type          : '(I)J'
+      access        : 0x0109 (PUBLIC STATIC NATIVE)
+      code          : (none)
+
+  Virtual methods   -
+  source_file_idx   : 5 (Fibonacci.java)
+
+Class #3            -
+  Class descriptor  : 'Lcom/apress/proandroid/FibonacciInterface;'
+  Access flags      : 0x0601 (PUBLIC INTERFACE ABSTRACT)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+  Virtual methods   -
+    #0              : (in Lcom/apress/proandroid/FibonacciInterface;)
+      name          : 'iterativeFaster'
+      type          : '(I)J'
+      access        : 0x0401 (PUBLIC ABSTRACT)
+      code          : (none)
+
+    #1              : (in Lcom/apress/proandroid/FibonacciInterface;)
+      name          : 'recursive'
+      type          : '(I)J'
+      access        : 0x0401 (PUBLIC ABSTRACT)
+      code          : (none)
+
+  source_file_idx   : 8 (FibonacciInterface.java)
+
+Class #4            -
+  Class descriptor  : 'Lcom/apress/proandroid/FibonacciJava;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+    #0              : 'Lcom/apress/proandroid/FibonacciInterface;'
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/FibonacciJava;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0008d0:                                        |[0008d0] com.apress.proandroid.FibonacciJava.<init>:()V
+0008e0: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+0008e6: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=3
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/FibonacciJava; 
+
+  Virtual methods   -
+    #0              : (in Lcom/apress/proandroid/FibonacciJava;)
+      name          : 'iterativeFaster'
+      type          : '(I)J'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 9
+      ins           : 2
+      outs          : 0
+      insns size    : 25 16-bit code units
+0008e8:                                        |[0008e8] com.apress.proandroid.FibonacciJava.iterativeFaster:(I)J
+0008f8: 1215                                   |0000: const/4 v5, #int 1 // #1
+0008fa: 3758 1600                              |0001: if-le v8, v5, 0017 // +0016
+0008fe: 1602 0100                              |0003: const-wide/16 v2, #int 1 // #1
+000902: d808 08ff                              |0005: add-int/lit8 v8, v8, #int -1 // #ff
+000906: dd05 0801                              |0007: and-int/lit8 v5, v8, #int 1 // #01
+00090a: 8150                                   |0009: int-to-long v0, v5
+00090c: db08 0802                              |000a: div-int/lit8 v8, v8, #int 2 // #02
+000910: 0184                                   |000c: move v4, v8
+000912: d808 04ff                              |000d: add-int/lit8 v8, v4, #int -1 // #ff
+000916: 3c04 0400                              |000f: if-gtz v4, 0013 // +0004
+00091a: 0425                                   |0011: move-wide v5, v2
+00091c: 1005                                   |0012: return-wide v5
+00091e: bb20                                   |0013: add-long/2addr v0, v2
+000920: bb02                                   |0014: add-long/2addr v2, v0
+000922: 0184                                   |0015: move v4, v8
+000924: 28f7                                   |0016: goto 000d // -0009
+000926: 8185                                   |0017: int-to-long v5, v8
+000928: 28fa                                   |0018: goto 0012 // -0006
+      catches       : (none)
+      positions     : 
+        0x0000 line=11
+        0x0003 line=12
+        0x0005 line=13
+        0x0007 line=14
+        0x000a line=15
+        0x000d line=16
+        0x0012 line=22
+        0x0013 line=17
+        0x0014 line=18
+        0x0017 line=22
+      locals        : 
+        0x0000 - 0x000d reg=8 n I 
+        0x000d - 0x000f reg=4 n I 
+        0x000a - 0x0012 reg=0 a J 
+        0x0005 - 0x0012 reg=2 b J 
+        0x000f - 0x0016 reg=8 n I 
+        0x0013 - 0x0017 reg=0 a J 
+        0x0013 - 0x0017 reg=2 b J 
+        0x0016 - 0x0017 reg=4 n I 
+        0x0000 - 0x0019 reg=7 this Lcom/apress/proandroid/FibonacciJava; 
+        0x0017 - 0x0019 reg=8 n I 
+
+    #1              : (in Lcom/apress/proandroid/FibonacciJava;)
+      name          : 'recursive'
+      type          : '(I)J'
+      access        : 0x0001 (PUBLIC)
+      code          -
+      registers     : 6
+      ins           : 2
+      outs          : 2
+      insns size    : 20 16-bit code units
+00092c:                                        |[00092c] com.apress.proandroid.FibonacciJava.recursive:(I)J
+00093c: 1212                                   |0000: const/4 v2, #int 1 // #1
+00093e: 3725 1100                              |0001: if-le v5, v2, 0012 // +0011
+000942: 1220                                   |0003: const/4 v0, #int 2 // #2
+000944: 9100 0500                              |0004: sub-int v0, v5, v0
+000948: 6e20 1500 0400                         |0006: invoke-virtual {v4, v0}, Lcom/apress/proandroid/FibonacciJava;.recursive:(I)J // method@0015
+00094e: 0b00                                   |0009: move-result-wide v0
+000950: 9102 0502                              |000a: sub-int v2, v5, v2
+000954: 6e20 1500 2400                         |000c: invoke-virtual {v4, v2}, Lcom/apress/proandroid/FibonacciJava;.recursive:(I)J // method@0015
+00095a: 0b02                                   |000f: move-result-wide v2
+00095c: bb20                                   |0010: add-long/2addr v0, v2
+00095e: 1000                                   |0011: return-wide v0
+000960: 8150                                   |0012: int-to-long v0, v5
+000962: 28fe                                   |0013: goto 0011 // -0002
+      catches       : (none)
+      positions     : 
+        0x0001 line=6
+        0x0011 line=7
+      locals        : 
+        0x0000 - 0x0014 reg=4 this Lcom/apress/proandroid/FibonacciJava; 
+        0x0000 - 0x0014 reg=5 n I 
+
+  source_file_idx   : 9 (FibonacciJava.java)
+
+Class #5            -
+  Class descriptor  : 'Lcom/apress/proandroid/FibonacciNative;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+    #0              : 'Lcom/apress/proandroid/FibonacciInterface;'
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/FibonacciNative;)
+      name          : '<clinit>'
+      type          : '()V'
+      access        : 0x10008 (STATIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 0
+      outs          : 1
+      insns size    : 6 16-bit code units
+000964:                                        |[000964] com.apress.proandroid.FibonacciNative.<clinit>:()V
+000974: 1a00 3e00                              |0000: const-string v0, "fibonacci" // string@003e
+000978: 7110 2800 0000                         |0002: invoke-static {v0}, Ljava/lang/System;.loadLibrary:(Ljava/lang/String;)V // method@0028
+00097e: 0e00                                   |0005: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=5
+        0x0005 line=3
+      locals        : 
+
+    #1              : (in Lcom/apress/proandroid/FibonacciNative;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000980:                                        |[000980] com.apress.proandroid.FibonacciNative.<init>:()V
+000990: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+000996: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=3
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/FibonacciNative; 
+
+  Virtual methods   -
+    #0              : (in Lcom/apress/proandroid/FibonacciNative;)
+      name          : 'iterativeFaster'
+      type          : '(I)J'
+      access        : 0x0101 (PUBLIC NATIVE)
+      code          : (none)
+
+    #1              : (in Lcom/apress/proandroid/FibonacciNative;)
+      name          : 'recursive'
+      type          : '(I)J'
+      access        : 0x0101 (PUBLIC NATIVE)
+      code          : (none)
+
+  source_file_idx   : 10 (FibonacciNative.java)
+
+Class #6            -
+  Class descriptor  : 'Lcom/apress/proandroid/R$attr;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/R$attr;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000998:                                        |[000998] com.apress.proandroid.R.attr.<init>:()V
+0009a8: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+0009ae: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=11
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/R$attr; 
+
+  Virtual methods   -
+  source_file_idx   : 42 (R.java)
+
+Class #7            -
+  Class descriptor  : 'Lcom/apress/proandroid/R$drawable;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/apress/proandroid/R$drawable;)
+      name          : 'icon'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/R$drawable;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0009b0:                                        |[0009b0] com.apress.proandroid.R.drawable.<init>:()V
+0009c0: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+0009c6: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=13
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/R$drawable; 
+
+  Virtual methods   -
+  source_file_idx   : 42 (R.java)
+
+Class #8            -
+  Class descriptor  : 'Lcom/apress/proandroid/R$id;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/apress/proandroid/R$id;)
+      name          : 'button'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+    #1              : (in Lcom/apress/proandroid/R$id;)
+      name          : 'button2'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/R$id;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0009c8:                                        |[0009c8] com.apress.proandroid.R.id.<init>:()V
+0009d8: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+0009de: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=16
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/R$id; 
+
+  Virtual methods   -
+  source_file_idx   : 42 (R.java)
+
+Class #9            -
+  Class descriptor  : 'Lcom/apress/proandroid/R$layout;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/apress/proandroid/R$layout;)
+      name          : 'main'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/R$layout;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0009e0:                                        |[0009e0] com.apress.proandroid.R.layout.<init>:()V
+0009f0: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+0009f6: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=20
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/R$layout; 
+
+  Virtual methods   -
+  source_file_idx   : 42 (R.java)
+
+Class #10            -
+  Class descriptor  : 'Lcom/apress/proandroid/R$string;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in Lcom/apress/proandroid/R$string;)
+      name          : 'app_name'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+    #1              : (in Lcom/apress/proandroid/R$string;)
+      name          : 'hello'
+      type          : 'I'
+      access        : 0x0019 (PUBLIC STATIC FINAL)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/R$string;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+0009f8:                                        |[0009f8] com.apress.proandroid.R.string.<init>:()V
+000a08: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+000a0e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=23
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/R$string; 
+
+  Virtual methods   -
+  source_file_idx   : 42 (R.java)
+
+Class #11            -
+  Class descriptor  : 'Lcom/apress/proandroid/R;'
+  Access flags      : 0x0011 (PUBLIC FINAL)
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+  Instance fields   -
+  Direct methods    -
+    #0              : (in Lcom/apress/proandroid/R;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10001 (PUBLIC CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000a10:                                        |[000a10] com.apress.proandroid.R.<init>:()V
+000a20: 7010 2000 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0020
+000a26: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=10
+      locals        : 
+        0x0000 - 0x0004 reg=0 this Lcom/apress/proandroid/R; 
+
+  Virtual methods   -
+  source_file_idx   : 42 (R.java)
+

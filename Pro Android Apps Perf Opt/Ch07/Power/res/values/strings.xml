@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="showPowerUsageSummary">Show power usage</string>
+    <string name="cancelAlarms">Cancel alarms</string>
+    <string name="app_name">Chapter7</string>
+</resources>

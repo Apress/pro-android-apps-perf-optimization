@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, LayoutsActivity!</string>
+    <string name="app_name">Layouts</string>
+    <string name="str1">string 1</string>
+    <string name="str2">string 2</string>
+    <string name="str3">string 3</string>
+    <string name="str4">string 4</string>
+    <string name="str5">string 5</string>
+    <string name="str6">string 6</string>
+    <string name="mylayout">My layout</string>
+        
+</resources>
